@@ -1,10 +1,27 @@
-import { render } from "@testing-library/react";
-import App from "./App";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import configureMockStore, { MockStoreEnhanced } from 'redux-mock-store';
+import { getInitialState } from '../../store/initialState';
+import { Provider } from 'react-redux';
+import App from './App';
 
-describe("App tests", () => {
-  it("should render App component", () => {
-    const { baseElement } = render(<App />);
+describe('App component', () => {
+  let store: MockStoreEnhanced<unknown, {}>;
+  const setup = (): JSX.Element => {
+    const initialState = getInitialState();
+    store = configureMockStore()({ list: initialState });
 
-    expect(baseElement).toBeTruthy();
+    return (
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+  };
+
+  it('Should render App component correctly', () => {
+    render(setup());
+    const pageTitle = screen.getByText(/Engenharia de Software 2: Kanban Board/i);
+
+    expect(pageTitle).toBeInTheDocument();
   });
 });

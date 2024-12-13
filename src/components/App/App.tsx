@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 import List from '../List';
 import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { useAppSelector } from '../../store';
