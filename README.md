@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+# Trabalho Prático: Etapa 1 - Engenharia de Software II
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## (1) Os nomes dos membros do grupo:
 
-Currently, two official plugins are available:
+O trabalho foi desenvolvido individualmente por:
+Guilherme Pereira de Assis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## (2) Explicação do sistema
 
-## Expanding the ESLint configuration
+TODO
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## (3) Explicação das tecnologias utilizadas.
 
-- Configure the top-level `parserOptions` property like this:
+Para o desenvolvimento da aplicação foi utilizado o React com Typescript. O setup inicial foi feito utilizando o Vite, e o framework de testes unitários escolhidos foi o Vitest.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Adicional: Instruções para executar
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Clone o repositório, navegue para a pasta raíz do projeto e execute:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+    npm install
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Aguarde a instalação das dependências terminar e, para iniciar o servidor execute:
+
+    npm run dev
+
+A aplicação estará disponível no browser de sua preferência, provavelmente no endereço http://localhost:5173/
+Caso essa porta já esteja ocupada o Vite ira alocar outra porta para o servidor. Portanto, confira o terminal onde executou o projeto.
+
+### Testes
+
+Para executar os testes basta executar o comando
+
+    npm run test
