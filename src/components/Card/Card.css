@@ -1,0 +1,62 @@
+/* Contêiner do cartão */
+.card-container {
+    margin: 5px 0;
+    background: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    min-height: 25px;
+    width: 90%;
+    border-radius: 4px;
+    text-align: center;
+    cursor: grab;
+    padding: 10px 0;
+}
+
+/* Texto do cartão */
+.card-text {
+    cursor: text;
+}
+
+/* Campo de entrada do texto do cartão */
+.card-text-input {
+    width: 90%;
+    padding: 5px;
+    border: none;
+}
+
+.card-text-input:active,
+.card-text-input:focus {
+    border: none;
+    outline: none;
+}
+
+/* Contêiner do campo de entrada */
+.card-input-container {
+    position: relative;
+}
+
+.card-input-container>svg {
+    cursor: pointer;
+    margin: 0 0.5px;
+    position: absolute;
+    top: 50%;
+}
+
+/* Ícone de salvar */
+.save-icon {
+    color: #007bff;
+    right: 30px;
+}
+
+.save-icon:hover {
+    color: #0056b3;
+}
+
+/* Ícone de cancelar */
+.cancel-icon {
+    color: #dc3545;
+    right: 10px;
+}
+
+.cancel-icon:hover {
+    color: #f5c6cb;
+}

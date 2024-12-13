@@ -1,0 +1,55 @@
+/* Estilo principal */
+.App {
+    background: rgb(76, 158, 8);
+    background: linear-gradient(219deg,
+            rgba(76, 158, 8, 1) 0%,
+            rgba(66, 186, 25, 1) 58%,
+            rgba(36, 200, 23, 1) 100%);
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Título */
+.app-title {
+    color: white;
+    font-size: 2em;
+    margin: 0;
+    padding: 15px;
+}
+
+/* Ferramentas */
+.app-tools {
+    margin: 10px 15px;
+    position: relative;
+}
+
+/* Campo de busca */
+.search-card-input {
+    padding: 7px 10px;
+    border-radius: 4px;
+    border: none;
+    width: 20%;
+}
+
+/* Lista do quadro */
+.app-board-list {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 600px) {
+    .App {
+        height: 100%;
+        min-height: 100vh;
+    }
+
+    .app-board-list {
+        flex-wrap: wrap;
+    }
+
+    .search-card-input {
+        width: 95%;
+    }
+}
