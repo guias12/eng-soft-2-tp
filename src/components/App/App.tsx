@@ -1,17 +1,17 @@
-import { useState, ChangeEvent } from 'react';
-import List from '../List';
-import { DragDropContext, DropResult } from 'react-beautiful-dnd';
-import { useAppSelector } from '../../store';
-import { dragCard, filterCard } from '../../store/listSlice';
-import { selectState } from '../../store/listSlice';
-import { useDispatch } from 'react-redux';
+import { useState, ChangeEvent } from "react";
+import List from "../List";
+import { DragDropContext, DropResult } from "react-beautiful-dnd";
+import { useAppSelector } from "../../store";
+import { dragCard, filterCard } from "../../store/listSlice";
+import { selectState } from "../../store/listSlice";
+import { useDispatch } from "react-redux";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
   const state = useAppSelector(selectState);
-  const [searchInput, setSearchInput] = useState<string>('');
+  const [searchInput, setSearchInput] = useState<string>("");
 
   const handleDragEnd = (result: DropResult): void => {
     const { destination, source } = result;

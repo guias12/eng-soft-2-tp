@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { RootState } from '.';
-import { getInitialState } from './initialState.ts';
+import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from ".";
+import { getInitialState } from "./initialState.ts";
 
 let nextAvailableCardId = 1;
 
 const listSlice = createSlice({
-  name: 'list',
+  name: "list",
   initialState: getInitialState(),
   reducers: {
     addCard(state, action) {
